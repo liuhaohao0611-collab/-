@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>不是麻木</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <section id="landing" aria-label="着陆页">
+    <p class="landing-sub">青少年自嘲档案</p>
+    <h1>不是麻木<br />而是有时候想开摆</h1>
+    <button id="start-btn" type="button">开始阅览</button>
+  </section>
+
+  <div id="scroll-track" aria-hidden="true"></div>
+
+  <main id="stage" aria-live="polite">
+    <section class="panel" id="s1" data-i="0">
+      <img class="layer bg" src="./assets/s01-stairs/s01_bg_exam_stairs_loop_v1..png" alt="台阶背景" />
+      <img class="layer fx s1-papers" src="./assets/s01-stairs/s01_fx_formula_papers_v1.png" alt="公式纸" />
+      <img class="layer fx s1-pressure" src="./assets/s01-stairs/s01_fx_pressure_lines_v1.png" alt="压力线" />
+      <img class="layer char s1-a" src="./assets/s01-stairs/s01_char_robe_body_step_a_v1.png" alt="长衫人物动作一" />
+      <img class="layer char s1-b" src="./assets/s01-stairs/s01_char_robe_body_step_b_v1.png" alt="长衫人物动作二" />
+      <p class="caption top-center">毕业后，好想去看海。</p>
+    </section>
+
+    <section class="panel" id="s2" data-i="1">
+      <img class="layer bg" src="./assets/s02-maluo/s02_bg_jungle_wide_loop_v1.png" alt="藤蔓背景" />
+      <img class="layer prop s2-v1" src="./assets/s02-maluo/s02_prop_kpi_vine_1_v1.png" alt="左侧藤蔓" />
+      <img class="layer prop s2-v2" src="./assets/s02-maluo/s02_prop_kpi_vine_2_v1.png" alt="右侧藤蔓" />
+      <img class="layer fx s2-shards" src="./assets/s02-maluo/s02_fx_robe_burst_shards_v1.png" alt="长衫破碎" />
+      <img class="layer char s2-a" src="./assets/s02-maluo/s02_char_maluo_pose_a_v1.png" alt="荡跃动作一" />
+      <img class="layer char s2-b" src="./assets/s02-maluo/s02_char_maluo_pose_b_v1.png" alt="荡跃动作二" />
+      <img class="layer char s2-c" src="./assets/s02-maluo/s02_char_maluo_pose_c_v1.png" alt="荡跃动作三" />
+      <p class="caption right-bottom">不想干了。</p>
+    </section>
+
+    <section class="panel" id="s3" data-i="2">
+      <img class="layer bg" src="./assets/s03-fall/s03_bg_void_to_factory_v1.png" alt="齿轮背景" />
+      <img class="layer fg" src="./assets/s03-fall/s03_fg_gear_conveyor_v1.png" alt="传送带" />
+      <img class="layer fx s3-speed" src="./assets/s03-fall/s03_fx_speed_lines_v1.png" alt="速度线" />
+      <img class="layer fx s3-impact" src="./assets/s03-fall/s03_fx_impact_ring_v1.png" alt="落地效果" />
+      <img class="layer char s3-a" src="./assets/s03-fall/s03_char_fall_maluo_to_worker_a_v1.png" alt="落地动作一" />
+      <img class="layer char s3-b" src="./assets/s03-fall/s03_char_fall_maluo_to_worker_b_v1.png" alt="落地动作二" />
+      <p class="caption right-top">到底要干嘛......</p>
+
+      <div class="choice c3" id="c3">
+        <p>是否接受工作？</p>
+        <button id="choose-accept" type="button">接受</button>
+        <button id="choose-refuse" type="button">拒绝</button>
+      </div>
+      <img class="badge" src="./assets/s03-fall/s03_prop_badge_v1.png" alt="工牌" />
+    </section>
+
+    <section class="panel" id="s4" data-i="3">
+      <img class="layer bg s4-grid" src="./assets/s04-crack/s04_bg_office_grid_v1.png" alt="格子间背景" />
+      <img class="layer bg s4-chaos" src="./assets/s04-crack/s04_fx_crack_v1.png" alt="碎裂杂乱背景" />
+      <img class="layer prop s4-stamp" src="./assets/s04-crack/s04_prop_stamp_huge_v1.png" alt="印章" />
+      <img class="layer fx s4-crack" src="./assets/s04-crack/s04_fx_crack_v1.png" alt="碎裂效果" />
+      <img class="layer char s4-ink" src="./assets/s04-crack/s04_char_worker_collapse_v1.png" alt="化为墨水" />
+      <p class="caption left-bottom">喂......</p>
+
+      <div class="choice c4" id="c4">
+        <p>你决定怎样工作？</p>
+        <button id="choose-work" type="button">勤勤恳恳</button>
+        <button id="choose-slack" type="button">摸鱼开摆</button>
+      </div>
+    </section>
+
+    <section class="panel" id="s5" data-i="4">
+      <img class="layer ink full s5-ink-a" src="./assets/s05-sea/s05_fx_ink_spread_a_v1.png" alt="墨水一" />
+      <img class="layer ink full s5-ink-b" src="./assets/s05-sea/s05_fx_ink_spread_b_v1.png" alt="墨水二" />
+      <img class="layer ink full s5-ink-c" src="./assets/s05-sea/s05_fx_ink_spread_c_v1.png" alt="墨水三" />
+      <img class="layer prop s5-boat" src="./assets/s05-sea/s05_prop_boat_single_v1.png" alt="小舟" />
+      <img class="layer char s5-char" src="./assets/s05-sea/s05_char_lie_on_boat_v1.png" alt="躺在小舟上的人物" />
+      <img class="layer fx s5-wave" src="./assets/s05-sea/s05_fx_wave_soft_v1.png" alt="水波纹" />
+    </section>
+
+    <section class="panel" id="s6" data-i="5">
+      <img class="layer prop s6-note" src="./assets/s06-pause/s06_prop_blank_note_v1.png" alt="拿纸停顿帧" />
+      <p class="caption bottom-center">世界好大。</p>
+    </section>
+
+    <section class="panel" id="s7" data-i="6">
+      <img class="layer prop s7-a" src="./assets/s07-throw-input/s07_prop_bottle_throw_a_v1.png" alt="扔瓶子第一帧" />
+      <img class="layer prop s7-b" src="./assets/s07-throw-input/s07_prop_bottle_throw_b_v1.png" alt="扔瓶子第二帧" />
+      <img class="layer prop s7-c" src="./assets/s07-throw-input/s07_prop_bottle_throw_c_v1.png" alt="扔瓶子第三帧" />
+      <p class="caption bottom-center">关我什么事！</p>
+    </section>
+
+    <section class="panel" id="s8" data-i="7">
+      <img class="layer fx s8-particles" src="./assets/s08-seabed/s08_fx_particles_v1.png" alt="海中微粒气泡" />
+      <img class="layer prop s8-bottle" src="./assets/s08-seabed/s08_prop_user_bottle_shell_v1.png" alt="玻璃瓶下沉" />
+      <img class="layer fg s8-pile" src="./assets/s08-seabed/s08_fg_bottle_pile_base_v1.png" alt="玻璃瓶堆" />
+    </section>
+
+    <section class="panel" id="s9" data-i="8">
+      <img class="layer full s9-paper" src="./assets/s09/s09_prop_user_paper_v1.png" alt="纸张" />
+      <div class="writing" id="writing-box">
+        <label for="voice" class="sr-only">输入想说的话</label>
+        <textarea id="voice" placeholder="你对你自己或者世界想说什么？" maxlength="120"></textarea>
+        <button id="throw-btn" type="button">投掷</button>
+      </div>
+      <img class="echo full" id="echo-bubble" src="./assets/s09/s09_ui_echo_bubble_v1.png" alt="回声气泡" />
+      <p id="echo-title">世界总是包容的，她听到了你的声音：</p>
+    </section>
+
+    <section class="panel" id="s10" data-i="9">
+      <div class="end-board">
+        <h2>出发咯！<br />到新的爱与喧嚣中去！</h2>
+      </div>
+      <aside class="scene-guide" aria-label="画面导览">
+        <button type="button" class="guide-cell" data-target="0">1</button>
+        <button type="button" class="guide-cell" data-target="1">2</button>
+        <button type="button" class="guide-cell" data-target="2">3</button>
+        <button type="button" class="guide-cell" data-target="3">4</button>
+        <button type="button" class="guide-cell" data-target="4">5</button>
+        <button type="button" class="guide-cell" data-target="5">6</button>
+        <button type="button" class="guide-cell" data-target="6">7</button>
+        <button type="button" class="guide-cell" data-target="7">8</button>
+      </aside>
+    </section>
+  </main>
+
+  <section id="branch" aria-hidden="true">
+    <article class="branch-scene" id="branch-refuse">
+      <img class="branch-layer full" src="./assets/branch-refuse/branch_refuse_bg_bamboo_v1.png" alt="竹林" />
+      <img class="branch-layer full leaves" src="./assets/branch-refuse/branch_refuse_fx_leaves_v1.png" alt="竹叶" />
+      <p class="branch-copy refuse-copy">其实我有个江湖梦来着......</p>
+      <button class="back-main" type="button" data-back="main">回到主线</button>
+    </article>
+
+    <article class="branch-scene" id="branch-slack">
+      <img class="branch-layer" src="./assets/branch-slack/branch_slack_prop_box_v1.png" alt="收纳盒" />
+      <img class="branch-layer text" src="./assets/branch-slack/branch_slack_prop_box_text_v1.png" alt="包装盒文字" />
+      <p class="branch-copy slack-copy">嗯，也行吧。</p>
+      <button class="back-main" type="button" data-back="main">回到主线</button>
+    </article>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+</html>
